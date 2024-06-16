@@ -1,0 +1,30 @@
+1;El Señor de los Anillos;J.R.R. Tolkien;1954;9780544003415;false
+2;Cien años de soledad;Gabriel García Márquez;1967;9780307474727;false
+3;1984;George Orwell;1949;9780451524935;false
+4;Don Quijote de la Mancha;Miguel de Cervantes;1605;9788420412146;false
+5;Orgullo y prejuicio;Jane Austen;1813;9780141439518;false
+6;Harry Potter y la piedra filosofal;J.K. Rowling;1997;9788478884453;false
+7;Matar a un ruiseñor;Harper Lee;1960;9788478884453;fals
+8;Rebelión en la granja;George Orwell;1945;9788499890941;false
+9;El principito;Antoine de Saint-Exupéry;1943;9788478884453;false
+10;El gran Gatsby;F. Scott Fitzgerald;1925;9788499890941;false
+11;Crimen y castigo;Fyodor Dostoevsky;1866;9788420631098;false
+12;El Hobbit;J.R.R. Tolkien;1937;9780345534835;false
+13;Los miserables;Victor Hugo;1862;9788420412146;false
+14;To Kill a Mockingbird;Harper Lee;1960;9780061120084;false
+15;Drácula;Bram Stoker;1897;9780141439518;false
+16;El código Da Vinci;Dan Brown;2003;9780307474277;false
+17;Moby Dick;Herman Melville;1851;9788420451008;false
+18;Anna Karenina;Leo Tolstoy;1877;9788499890941;false
+19;Los pilares de la tierra;Ken Follett;1989;9788401337954;false
+20;Las aventuras de Tom Sawyer;Mark Twain;1876;9780140620142;false
+21;Guerra y paz;Leo Tolstoy;1869;9788499890941;false
+22;Frankenstein;Mary Shelley;1818;9780141439518;false
+23;Crimen y castigo;Fyodor Dostoevsky;1866;9780141439518;false
+24;El retrato de Dorian Gray;Oscar Wilde;1890;9780141439518;false
+25;El guardián entre el centeno;J.D. Salinger;1951;9780316769488;false
+26;Las uvas de la ira;John Steinbeck;1939;9788499890941;false
+27;En busca del tiempo perdido;Marcel Proust;1913;9788499890941;false
+28;La metamorfosis;Franz Kafka;1915;9788499890941;false
+29;El nombre de la rosa;Umberto Eco;1980;9788478884453;false
+30;El extraño caso del doctor Jekyll y el señor Hyde;Robert Louis Stevenson;1886;9780141439518;false

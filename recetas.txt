@@ -1,0 +1,10 @@
+1;Pastel de chocolate;Chocolate;200;Harina;300;Azúcar;150;Huevo;4;Leche;200;Mantequilla;100;
+2;Tarta de manzana;Manzanas;4;Azúcar;100;Harina;200;Mantequilla;80;Huevo;3;Limones;2;
+3;Galletas de avena;Harina;250;Avena;200;Azúcar;150;Mantequilla;120;Huevo;2;Vainilla;1;
+4;Ensalada de quinoa;Quinoa;300;Tomate;4;Pepino;2;Cebolla roja;1;Pimiento rojo;1;
+5;Sopa de pollo;Pollo;500;Zanahoria;3;Apio;2;Cebolla;1;Ajo;2;Pasta;150;
+6;Pasta Alfredo;Pasta;300;Crema;200;Mantequilla;100;Parmesano;150;Ajo;3;
+7;Sándwich de pollo;Pollo;300;Pan;6;Tomate;2;Lechuga;1;Mayonesa;100;
+8;Batido de fresa;Fresas;200;Leche;300;Azúcar;50;
+9;Pizza casera;Harina;400;Tomate frito;200;Queso mozzarella;250;Jamón cocido;150;
+10;Ensalada César;Pollo;300;Lechuga romana;1;Pan tostado;100;Queso parmesano;80;Aderezo César;100;
