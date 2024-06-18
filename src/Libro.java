@@ -8,7 +8,7 @@ public class Libro {
     private String autor;
     private int anio_publicacion;
     private String isbn;
-    private boolean estado; // Indica si el libro está disponible (true) o no (false)
+    private boolean estado; 
 
     // Constructor
     public Libro(int id_libro, String titulo, String autor, int anio_publicacion, String isbn) {
@@ -79,6 +79,18 @@ public class Libro {
                 writer.write(libroStr);
                 writer.newLine();
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void guardarLibro(Libro libro) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(NombresArchivos.file_libros, true))) {
+            String libroStr = String.format("%d;%s;%s;%d;%s;%s",
+                    libro.getId_libro(), libro.getTitulo(), libro.getAutor(),
+                    libro.getAnio_publicacion(), libro.getIsbn(), libro.isEstado());
+            writer.write(libroStr);
+            writer.newLine();
         } catch (IOException e) {
             e.printStackTrace();
         }

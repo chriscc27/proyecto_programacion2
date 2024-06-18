@@ -97,6 +97,7 @@ public class ReporteLibros extends JFrame {
         panel.add(panelBotones, BorderLayout.SOUTH);
 
         add(panel);
+        setLocationRelativeTo(null); // Centrar la ventana en la pantalla
     }
 
     public void actualizarTabla() {
@@ -158,7 +159,4 @@ public class ReporteLibros extends JFrame {
         return null;
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(ReporteLibros::new);
-    }
 }

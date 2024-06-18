@@ -1,0 +1,19 @@
+1;Hamburguesa Clásica;5.99;Comida Rápida;Plato
+2;Ensalada César;7.5;Ensaladas;Ensaladera
+3;Pizza Margarita;9.99;Comida Italiana;Plato
+4;Sushi Variado;15.99;Comida Japonesa;Tabla
+5;Tacos de Carne Asada;8.5;Comida Mexicana;Plato
+6;Paella Valenciana;25.0;Comida Española;Paellera
+7;Pasta Alfredo;12.99;Comida Italiana;Plato
+8;Tapa de Jamón Ibérico;4.5;Tapas;Tabla
+9;Salmón a la Parrilla;18.5;Pescados y Mariscos;Plato
+10;Ramen de Pollo;10.99;Comida Japonesa;Bol
+11;Steak Tartar;17.5;Carnes;Plato
+12;Sopa de Tomate;6.5;Sopas;Cuenco
+13;Rollitos Vietnamitas;9.5;Comida Asiática;Plato
+14;Burrito de Pollo;8.99;Comida Mexicana;Plato
+15;Lasaña de Carne;11.5;Comida Italiana;Plato
+16;Sándwich Club;7.99;Comida Rápida;Plato
+17;Poke Bowl de Salmón;13.99;Comida Hawaiana;Bol
+18;Ceviche Peruano;14.5;Pescados y Mariscos;Plato
+19;Filete Mignon;22.99;Carnes;Plato

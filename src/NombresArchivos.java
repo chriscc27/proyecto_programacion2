@@ -5,5 +5,4 @@ public interface NombresArchivos {
 	static final String file_platos = "platos.txt";
 	static final String file_ingredientes = "ingredientes.txt";  
 	static final String file_libros = "libros.txt";
-	
 }

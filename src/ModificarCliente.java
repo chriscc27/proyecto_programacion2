@@ -89,6 +89,7 @@ public class ModificarCliente extends JFrame {
         panel.add(btnModificar);
 
         add(panel);
+        setLocationRelativeTo(null); // Centrar la ventana en la pantalla
     }
 
     private void modificar() {

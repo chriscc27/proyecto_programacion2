@@ -1,0 +1,19 @@
+1;Café Americano;1.5;Café;Vaso
+2;Café Latte;2.0;Café;Vaso
+3;Café Mocha;2.5;Café;Vaso
+4;Café Cortado;1.75;Café;Taza
+5;Capuchino;2.25;Café;Vaso
+6;Té Verde;1.5;Té;Vaso
+7;Té Negro;1.5;Té;Vaso
+8;Té de Manzanilla;1.5;Té;Vaso
+9;Chocolate Caliente;2.0;Chocolate;Taza
+10;Café Helado;2.5;Café;Vaso
+11;Té Helado;2.0;Té;Vaso
+12;Frappé de Café;3.0;Café;Vaso
+13;Mocha Helado;3.5;Café;Vaso
+14;Café Vienés;2.5;Café;Vaso
+15;Café con Leche;2.0;Café;Vaso
+16;Café Macchiato;1.75;Café;Vaso
+17;Cappuccino Helado;3.0;Café;Vaso
+18;Café Dalgona;2.25;Café;Vaso
+19;Té Chai Latte;2.5;Té;Vaso

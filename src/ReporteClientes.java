@@ -77,6 +77,7 @@ public class ReporteClientes extends JFrame {
         });
 
         setVisible(true);
+        setLocationRelativeTo(null); // Centrar la ventana en la pantalla
     }
 
     // Método para actualizar la tabla
@@ -101,9 +102,5 @@ public class ReporteClientes extends JFrame {
             data[i][7] = cliente.getDireccion();
         }
         return data;
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(ReporteClientes::new);
     }
 }

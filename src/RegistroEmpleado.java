@@ -106,6 +106,7 @@ public class RegistroEmpleado extends JFrame {
 
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
+        setLocationRelativeTo(null); // Centrar la ventana en la pantalla
     }
 
     private void limpiarCampos() {

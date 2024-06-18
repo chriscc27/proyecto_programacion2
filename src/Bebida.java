@@ -5,8 +5,8 @@ public class Bebida extends Producto {
     private String tipo;
     private String envase;
 
-    public Bebida(int idProducto, String nombre, double precio, String tipo, String envase) {
-        super(idProducto, nombre, precio);
+    public Bebida(int id_producto, String nombre, double precio, String tipo, String envase) {
+        super(id_producto, nombre, precio);
         this.tipo = tipo;
         this.envase = envase;
     }
@@ -15,85 +15,75 @@ public class Bebida extends Producto {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
     public String getEnvase() {
         return envase;
     }
 
-    public void setEnvase(String envase) {
-        this.envase = envase;
-    }
-
-    // Método para agregar bebidas al archivo de texto
-    public static void agregarBebida(Bebida bebida) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(NombresArchivos.file_bebidas, true))) {
-            String bebidaStr = bebida.getId_producto() + ";" + bebida.getNombre() + ";" + bebida.getPrecio() + ";" +
-                    bebida.getTipo() + ";" + bebida.getEnvase();
-            writer.write(bebidaStr);
-            writer.newLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // Método para modificar la información de una bebida en el archivo de texto por su ID
-    public static void modificarBebida(int idBebida, Bebida bebidaModificada) {
-        eliminarBebida(idBebida);
-        agregarBebida(bebidaModificada);
-    }
-
-    // Método para mostrar la información de todas las bebidas
-    public static void mostrarBebidas() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(NombresArchivos.file_bebidas))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] datos = line.split(";");
-                int id = Integer.parseInt(datos[0]);
+    public static ArrayList<Bebida> mostrarBebidas() {
+        ArrayList<Bebida> bebidas = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader("bebidas.txt"))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(";");
+                int id_producto = Integer.parseInt(datos[0]);
                 String nombre = datos[1];
                 double precio = Double.parseDouble(datos[2]);
                 String tipo = datos[3];
                 String envase = datos[4];
-                Bebida bebida = new Bebida(id, nombre, precio, tipo, envase);
-                System.out.println(bebida);
+                bebidas.add(new Bebida(id_producto, nombre, precio, tipo, envase));
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return bebidas;
+    }
+
+    public static void agregarBebida(Bebida bebida) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("bebidas.txt", true))) {
+            bw.write(bebida.getId_producto() + ";" + bebida.getNombre() + ";" + bebida.getPrecio() + ";" + bebida.getTipo() + ";" + bebida.getEnvase());
+            bw.newLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    // Método para eliminar bebidas del archivo de texto por su ID
-    public static void eliminarBebida(int idBebida) {
-        try {
-            File inputFile = new File(NombresArchivos.file_bebidas);
-            File tempFile = new File("temp.txt");
-
-            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
-
-            String lineToRemove = idBebida + ";";
-
-            String currentLine;
-            while ((currentLine = reader.readLine()) != null) {
-                if (!currentLine.contains(lineToRemove)) {
-                    writer.write(currentLine + System.getProperty("line.separator"));
+    public static void eliminarBebida(int id_producto) {
+        ArrayList<Bebida> bebidas = mostrarBebidas();
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("bebidas.txt"))) {
+            for (Bebida bebida : bebidas) {
+                if (bebida.getId_producto() != id_producto) {
+                    bw.write(bebida.getId_producto() + ";" + bebida.getNombre() + ";" + bebida.getPrecio() + ";" + bebida.getTipo() + ";" + bebida.getEnvase());
+                    bw.newLine();
                 }
             }
-            writer.close();
-            reader.close();
-            tempFile.renameTo(inputFile);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    @Override
-    public String toString() {
-        return "Bebida{" +
-                "tipo='" + tipo + '\'' +
-                ", envase='" + envase + '\'' +
-                "} " + super.toString();
+    public static void modificarBebida(int id_producto, Bebida bebidaModificada) {
+        ArrayList<Bebida> bebidas = mostrarBebidas();
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("bebidas.txt"))) {
+            for (Bebida bebida : bebidas) {
+                if (bebida.getId_producto() == id_producto) {
+                    bw.write(bebidaModificada.getId_producto() + ";" + bebidaModificada.getNombre() + ";" + bebidaModificada.getPrecio() + ";" + bebidaModificada.getTipo() + ";" + bebidaModificada.getEnvase());
+                } else {
+                    bw.write(bebida.getId_producto() + ";" + bebida.getNombre() + ";" + bebida.getPrecio() + ";" + bebida.getTipo() + ";" + bebida.getEnvase());
+                }
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static Bebida buscarBebida(int id_producto) {
+        ArrayList<Bebida> bebidas = mostrarBebidas();
+        for (Bebida bebida : bebidas) {
+            if (bebida.getId_producto() == id_producto) {
+                return bebida;
+            }
+        }
+        return null;
     }
 }

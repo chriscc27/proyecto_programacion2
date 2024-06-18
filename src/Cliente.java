@@ -57,7 +57,6 @@ public class Cliente extends Persona {
     }
 
     // Método para modificar la información de un cliente en el archivo de texto por su ID
- // Método para modificar la información de un cliente en el archivo de texto por su ID
     public static void modificar_cliente(int idCliente, Cliente clienteModificado) {
         try {
             File inputFile = new File(NombresArchivos.file_clientes);
@@ -122,7 +121,6 @@ public class Cliente extends Persona {
     }
 
     // Método para eliminar clientes del archivo de texto por su ID
- // Método para eliminar clientes del archivo de texto por su ID
     public static void eliminar_cliente(int idCliente) {
         try {
             File inputFile = new File(NombresArchivos.file_clientes);

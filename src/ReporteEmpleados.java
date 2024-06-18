@@ -77,6 +77,7 @@ public class ReporteEmpleados extends JFrame {
         });
 
         setVisible(true);
+        setLocationRelativeTo(null); // Centrar la ventana en la pantalla
     }
 
     // Método para actualizar la tabla
@@ -102,9 +103,5 @@ public class ReporteEmpleados extends JFrame {
             data[i][8] = empleado.getCargo();
         }
         return data;
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(ReporteEmpleados::new);
     }
 }

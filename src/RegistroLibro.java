@@ -57,6 +57,7 @@ public class RegistroLibro extends JFrame {
         panel.add(btnRegistrar);
 
         add(panel);
+        setLocationRelativeTo(null); // Centrar la ventana en la pantalla
     }
 
     private void registrar() {
@@ -71,7 +72,6 @@ public class RegistroLibro extends JFrame {
 
         JOptionPane.showMessageDialog(this, "Libro registrado correctamente");
         limpiarCampos();
-        reporteLibros.actualizarTabla();
     }
 
     private void limpiarCampos() {
