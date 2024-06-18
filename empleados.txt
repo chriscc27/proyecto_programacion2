@@ -1,20 +1,19 @@
-1;Juan;Perez;Gomez;5551234567;juan@example.com;Camisa negra, pantalón negro;2500.0;2023-05-15;8:00-17:00;Gerente
-2;María;López;Martínez;5559876543;maria@example.com;Camisa blanca, pantalón negro;2000.0;2023-06-20;9:00-18:00;Asistente Administrativo
-3;Pedro;González;Rodríguez;5551112233;pedro@example.com;Camisa azul, pantalón beige;1800.0;2023-07-10;10:00-19:00;Vendedor
-4;Ana;Sánchez;Fernández;5552223344;ana@example.com;Camisa roja, pantalón negro;1900.0;2023-08-05;9:00-18:00;Asistente de Ventas
-5;Carlos;Ramírez;García;5553334455;carlos@example.com;Camisa verde, pantalón beige;1750.0;2023-09-01;8:00-17:00;Cajero
-6;Laura;Díaz;Hernández;5554445566;laura@example.com;Camisa amarilla, pantalón negro;1850.0;2023-10-12;9:00-18:00;Recepcionista
-7;Javier;Martín;Dominguez;5555556666;javier@example.com;Camisa blanca, pantalón negro;2000.0;2023-11-20;8:00-17:00;Gerente de Ventas
-8;Sofía;Vázquez;Moreno;5556667777;sofia@example.com;Camisa negra, pantalón negro;2100.0;2023-12-05;9:00-18:00;Contador
-9;Diego;Torres;Álvarez;5557778888;diego@example.com;Camisa blanca, pantalón negro;1950.0;2024-01-15;8:00-17:00;Supervisor
-10;Lucía;Ruiz;Jiménez;5558889999;lucia@example.com;Camisa verde, pantalón beige;1800.0;2024-02-20;10:00-19:00;Vendedor
-11;Roberto;Herrera;Díaz;5559990000;roberto@example.com;Camisa azul, pantalón negro;1900.0;2024-03-05;9:00-18:00;Asistente de Ventas
-12;Patricia;Gómez;Gutiérrez;5550001111;patricia@example.com;Camisa amarilla, pantalón beige;1700.0;2024-04-10;8:00-17:00;Cajero
-13;Jorge;Navarro;Sánchez;5551234567;jorge@example.com;Camisa blanca, pantalón negro;2000.0;2024-05-20;9:00-18:00;Gerente de Marketing
-14;Natalia;Cabrera;López;5559876543;natalia@example.com;Camisa negra, pantalón negro;2100.0;2024-06-15;8:00-17:00;Asistente Administrativo
-15;Martín;Mendoza;Rodríguez;5551112233;martin@example.com;Camisa azul, pantalón beige;1800.0;2024-07-01;10:00-19:00;Vendedor
-16;Elena;Hernández;Fernández;5552223344;elena@example.com;Camisa roja, pantalón negro;1900.0;2024-08-05;9:00-18:00;Asistente de Ventas
-17;Alberto;Luna;García;5553334455;alberto@example.com;Camisa verde, pantalón beige;1750.0;2024-09-10;8:00-17:00;Cajero
-18;Claudia;González;Hernández;5554445566;claudia@example.com;Camisa amarilla, pantalón negro;1850.0;2024-10-20;9:00-18:00;Recepcionista
-19;Adrián;Martínez;Gómez;5555556666;adrian@example.com;Camisa blanca, pantalón negro;2000.0;2024-11-15;8:00-17:00;Gerente de Ventas
-20;Mariana;Fernández;Moreno;5556667777;mariana@example.com;Camisa negra, pantalón negro;2100.0;2024-12-05;9:00-18:00;Contador
+1;Moises;Perez;Gomez;5551234567;juan@example.com;2500.0;2023-05-15;Gerente
+2;Camila;López;Martínez;5559876543;maria@example.com;2000.0;2023-06-20;Asistente Administrativo
+3;Pedro;González;Rodríguez;5551112233;pedro@example.com;1800.0;2023-07-10;Vendedor
+5;Carlos;Ramírez;García;5553334455;carlos@example.com;1750.0;2023-09-01;Cajero
+6;Laura;Díaz;Hernández;5554445566;laura@example.com;1850.0;2023-10-12;Recepcionista
+7;Javier;Martín;Dominguez;5555556666;javier@example.com;2000.0;2023-11-20;Gerente de Ventas
+8;Sofía;Vázquez;Moreno;5556667777;sofia@example.com;2100.0;2023-12-05;Contador
+9;Diego;Torres;Álvarez;5557778888;diego@example.com;1950.0;2024-01-15;Supervisor
+10;Lucía;Ruiz;Jiménez;5558889999;lucia@example.com;1800.0;2024-02-20;Vendedor
+11;Roberto;Herrera;Díaz;5559990000;roberto@example.com;1900.0;2024-03-05;Asistente de Ventas
+12;Patricia;Gómez;Gutiérrez;5550001111;patricia@example.com;1700.0;2024-04-10;Cajero
+13;Jorge;Navarro;Sánchez;5551234567;jorge@example.com;2000.0;2024-05-20;Gerente de Marketing
+14;Natalia;Cabrera;López;5559876543;natalia@example.com;2100.0;2024-06-15;Asistente Administrativo
+15;Martín;Mendoza;Rodríguez;5551112233;martin@example.com;1800.0;2024-07-01;Vendedor
+16;Elena;Hernández;Fernández;5552223344;elena@example.com;1900.0;2024-08-05;Asistente de Ventas
+17;Alberto;Luna;García;5553334455;alberto@example.com;1750.0;2024-09-10;Cajero
+18;Claudia;González;Hernández;5554445566;claudia@example.com;1850.0;2024-10-20;Recepcionista
+19;Adrián;Martínez;Gómez;5555556666;adrian@example.com;2000.0;2024-11-15;Gerente de Ventas
+20;Mariana;Fernández;Moreno;5556667777;mariana@example.com;2100.0;2024-12-05;Contador1;pedro;Perez;Gomez;5551234567;juan@example.com;2500.0;2023-05-15;Gerente

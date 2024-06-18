@@ -1,18 +1,19 @@
 public class Persona {
+	
     // Atributos
     private String nombre;
     private String paterno;
     private String materno;
     private String telefono;
-    private String correoElectronico;
+    private String correo_electronico;
 
     // Constructor
-    public Persona(String nombre, String paterno, String materno, String telefono, String correoElectronico) {
+    public Persona(String nombre, String paterno, String materno, String telefono, String correo_electronico) {
         this.nombre = nombre;
         this.paterno = paterno;
         this.materno = materno;
         this.telefono = telefono;
-        this.correoElectronico = correoElectronico;
+        this.correo_electronico = correo_electronico;
     }
 
     // Métodos getters y setters
@@ -48,12 +49,12 @@ public class Persona {
         this.telefono = telefono;
     }
 
-    public String getCorreoElectronico() {
-        return correoElectronico;
+    public String getCorreo_electronico() {
+        return correo_electronico;
     }
 
-    public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronico = correoElectronico;
+    public void setCorreo_electronico(String correo_electronico) {
+        this.correo_electronico = correo_electronico;
     }
 
     // Método toString para representación en cadena
@@ -64,7 +65,7 @@ public class Persona {
                 ", paterno='" + paterno + '\'' +
                 ", materno='" + materno + '\'' +
                 ", telefono='" + telefono + '\'' +
-                ", correoElectronico='" + correoElectronico + '\'' +
+                ", correo_electronico='" + correo_electronico + '\'' +
                 '}';
     }
 }

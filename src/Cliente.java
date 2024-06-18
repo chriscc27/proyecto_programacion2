@@ -1,21 +1,20 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.time.LocalDate;
 
 public class Cliente extends Persona {
     // Atributos adicionales
     private int id_cliente;
-    private String feedback;
+    private LocalDate fecha_registro;
     private String direccion;
 
-    // Variable para el nombre del archivo de clientes
-    private static final String fileClientes = "clientes.txt";
 
     // Constructor
-    public Cliente(int id_cliente, String nombre, String paterno, String materno, String telefono, String correoElectronico, String feedback, String direccion) {
+    public Cliente(int id_cliente, String nombre, String paterno, String materno, String telefono, String correo_electronico, LocalDate fecha_registro, String direccion) {
         // Llama al constructor de la clase padre (Persona)
-        super(nombre, paterno, materno, telefono, correoElectronico);
+        super(nombre, paterno, materno, telefono, correo_electronico);
         this.id_cliente = id_cliente;
-        this.feedback = feedback;
+        this.fecha_registro = fecha_registro;
         this.direccion = direccion;
     }
 
@@ -28,12 +27,12 @@ public class Cliente extends Persona {
         this.id_cliente = id_cliente;
     }
 
-    public String getFeedback() {
-        return feedback;
+    public LocalDate getFechaRegistro() {
+        return fecha_registro;
     }
 
-    public void setFeedback(String feedback) {
-        this.feedback = feedback;
+    public void setFechaRegistro(LocalDate fecha_registro) {
+        this.fecha_registro = fecha_registro;
     }
 
     public String getDireccion() {
@@ -45,11 +44,11 @@ public class Cliente extends Persona {
     }
 
     // Método para agregar clientes al archivo de texto
-    public static void agregarCliente(Cliente cliente) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileClientes, true))) {
+    public static void agregar_cliente(Cliente cliente) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(NombresArchivos.file_clientes, true))) {
             String clienteStr = cliente.getIdCliente() + ";" + cliente.getNombre() + ";" + cliente.getPaterno() + ";" +
-                    cliente.getMaterno() + ";" + cliente.getTelefono() + ";" + cliente.getCorreoElectronico() + ";" +
-                    cliente.getFeedback() + ";" + cliente.getDireccion();
+                    cliente.getMaterno() + ";" + cliente.getTelefono() + ";" + cliente.getCorreo_electronico() + ";" +
+                    cliente.getFechaRegistro() + ";" + cliente.getDireccion();
             writer.write(clienteStr);	
             writer.newLine();
         } catch (IOException e) {
@@ -58,15 +57,50 @@ public class Cliente extends Persona {
     }
 
     // Método para modificar la información de un cliente en el archivo de texto por su ID
-    public static void modificarCliente(int idCliente, Cliente clienteModificado) {
-        eliminarCliente(idCliente);
-        agregarCliente(clienteModificado);
+ // Método para modificar la información de un cliente en el archivo de texto por su ID
+    public static void modificar_cliente(int idCliente, Cliente clienteModificado) {
+        try {
+            File inputFile = new File(NombresArchivos.file_clientes);
+            File tempFile = new File("temp.txt");
+
+            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+            String currentLine;
+            while ((currentLine = reader.readLine()) != null) {
+                String[] datos = currentLine.split(";");
+                if (Integer.parseInt(datos[0]) == idCliente) {
+                    // Escribir el cliente modificado en lugar del original
+                    String clienteStr = clienteModificado.getIdCliente() + ";" + clienteModificado.getNombre() + ";" +
+                            clienteModificado.getPaterno() + ";" + clienteModificado.getMaterno() + ";" +
+                            clienteModificado.getTelefono() + ";" + clienteModificado.getCorreo_electronico() + ";" +
+                            clienteModificado.getFechaRegistro() + ";" + clienteModificado.getDireccion();
+                    writer.write(clienteStr + System.getProperty("line.separator"));
+                } else {
+                    // Escribir la línea sin cambios
+                    writer.write(currentLine + System.getProperty("line.separator"));
+                }
+            }
+            writer.close();
+            reader.close();
+            
+            if (!inputFile.delete()) {
+                System.out.println("Could not delete file");
+                return;
+            }
+            if (!tempFile.renameTo(inputFile)) {
+                System.out.println("Could not rename file");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
+
     // Método para ver la información de todos los clientes y retornar un ArrayList de tipo Cliente
-    public static ArrayList<Cliente> verClientes() {
+    public static ArrayList<Cliente> ver_clientes() {
         ArrayList<Cliente> clientes = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileClientes))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(NombresArchivos.file_clientes))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] datos = line.split(";");
@@ -75,10 +109,10 @@ public class Cliente extends Persona {
                 String paterno = datos[2];
                 String materno = datos[3];
                 String telefono = datos[4];
-                String correoElectronico = datos[5];
-                String feedback = datos[6];
+                String correo_electronico = datos[5];
+                LocalDate fecha_registro = LocalDate.parse(datos[6]);
                 String direccion = datos[7];
-                Cliente cliente = new Cliente(id_cliente, nombre, paterno, materno, telefono, correoElectronico, feedback, direccion);
+                Cliente cliente = new Cliente(id_cliente, nombre, paterno, materno, telefono, correo_electronico, fecha_registro, direccion);
                 clientes.add(cliente);
             }
         } catch (IOException e) {
@@ -88,9 +122,10 @@ public class Cliente extends Persona {
     }
 
     // Método para eliminar clientes del archivo de texto por su ID
-    public static void eliminarCliente(int idCliente) {
+ // Método para eliminar clientes del archivo de texto por su ID
+    public static void eliminar_cliente(int idCliente) {
         try {
-            File inputFile = new File(fileClientes);
+            File inputFile = new File(NombresArchivos.file_clientes);
             File tempFile = new File("temp.txt");
 
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
@@ -106,7 +141,14 @@ public class Cliente extends Persona {
             }
             writer.close();
             reader.close();
-            tempFile.renameTo(inputFile);
+            
+            if (!inputFile.delete()) {
+                System.out.println("Could not delete file");
+                return;
+            }
+            if (!tempFile.renameTo(inputFile)) {
+                System.out.println("Could not rename file");
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -121,8 +163,8 @@ public class Cliente extends Persona {
                 ", paterno='" + getPaterno() + '\'' +
                 ", materno='" + getMaterno() + '\'' +
                 ", telefono='" + getTelefono() + '\'' +
-                ", correoElectronico='" + getCorreoElectronico() + '\'' +
-                ", feedback='" + feedback + '\'' +
+                ", correoElectronico='" + getCorreo_electronico() + '\'' +
+                ", fechaRegistro='" + fecha_registro + '\'' +
                 ", direccion='" + direccion + '\'' +
                 '}';
     }

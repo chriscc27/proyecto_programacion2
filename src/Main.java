@@ -4,6 +4,8 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
+    	Principal principal = new Principal();
+    	
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Bienvenido al sistema de la cafetería");
